@@ -31,6 +31,7 @@ window.addEventListener('load', () => {
   }
 
   function handleRangeUpdate() {
+    console.log(this.value);
     video[this.name] = this.value;
   }
 
@@ -59,7 +60,7 @@ window.addEventListener('load', () => {
     range.addEventListener('mousemove', handleRangeUpdate)
   );
 
-  // let mousedown = false;
+  let mousedown = false;
   progress.addEventListener('click', scrub);
   progress.addEventListener('mousemove', () => mousedown && scrub);
   // progress.addEventListener('mousedown', () => (mousedown = true));
